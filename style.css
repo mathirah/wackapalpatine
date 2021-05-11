@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "helvetica";
+}
+.wrapper {
+  font-family: "helvetica";
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("img/back3.jpg");
+  overflow: hidden;
+  cursor: url("img/cuba2.png"), auto;
+}
+
+.score {
+  /* font-size: 150px;
+  color: #010124;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  border: 1px solid black;
+  /* width: 200px;
+  height: 100px;
+  text-align: center; */
+  position: absolute;
+  top: 40px;
+  font-size: 25px;
+  font-size: 25px;
+  font-weight: 900;
+  margin-left: 20pt;
+  background-color: rgb(240, 234, 227);
+}
+
+/* .highscore {
+  border: 2px solid red;
+  position: absolute;
+  top: 10px;
+  font-size: 25px;
+  font-size: 25px;
+  font-weight: 900;
+} */
+
+.countdown {
+  /* position: absolute;
+  border: 2px solid black;
+  top: 400px;
+  width: 100%;
+  font-size: 20px;
+  text-align: right;
+  color: #010124; */
+
+  /* border: 2px solid red; */
+  position: absolute;
+  bottom: 10px;
+  font-size: 25px;
+  color: white;
+  font-weight: 900;
+  margin-left: 20pt;
+}
+
+button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #9cda0c;
+  font-weight: bold;
+  font-size: 500;
+  color: black;
+  padding: 20px 50px;
+  border-radius: 5px;
+  z-index: 200;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.game {
+  /* border: 2px solid black; */
+  width: 600px;
+  height: 400px;
+  margin: 70px auto;
+  z-index: 200;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hole {
+  /* border: 3px solid red; */
+  flex: 1 0 33.3%;
+  position: relative;
+  overflow: hidden;
+}
+.hole:after {
+  content: "";
+  display: block;
+  background-image: url("img/sand2.png");
+  /* background: black; */
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
+  bottom: -30px;
+  background-size: contain;
+}
+
+.mole {
+  background-image: url("img/palpatine2.png");
+  position: absolute;
+  top: 100%; /* to hide the   */
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.mole.small {
+  background-size: 80%;
+}
+.mole.large {
+  background-size: 80%;
+}
+
+.hole.up .mole {
+  top: 0;
+}
